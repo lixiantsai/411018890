@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<a href='HW1' id="kk">{{aaa}}</a>
+<script>
+    Vue.createApp({
+        data() {
+            return {
+                aaa: 87
+            }
+        }
+    }).mount("#kk");
+</script>
