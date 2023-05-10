@@ -16,3 +16,39 @@
         }
     }).mount("#kk");
 </script>
+
+@using (Html.BeginForm("Index", "Test", FormMethod.Post))
+{
+    <div>
+        name: @Html.TextBox("name")<br>
+        account: @Html.TextBox("account")<br>
+        password: @Html.Password("password")<br>
+        gender: @Html.RadioButton("gender", "0") male @Html.RadioButton("gender", "1") female<br>
+        interest: @Html.CheckBox("it")? @Html.CheckBox("it")?? @Html.CheckBox("it")???<br>
+        @Html.TextArea("textarea")<br>
+    </div>
+}
+@{
+    var cc = true;
+    string[] a = {"a","b","c","d","e","f","g" };
+}
+<p>@cc</p>
+<p>@DateTime.Now</p>
+@if (cc)
+{
+    <p>是帥哥</p>
+}
+else
+{
+    <p>不是帥哥</p>
+}
+@for(var i = 1; i <= 10; i++)
+{
+    @i
+}
+<ol>
+@foreach (var s in a)
+{
+    <li>@s</li>
+}
+</ol>
