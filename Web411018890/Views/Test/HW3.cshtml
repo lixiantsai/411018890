@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "HW3";
+}
+
+<h2>HW3</h2>
+
+@{ 
+    string[,] a = { {"a","b","c" },{"1","2","3" },{"!","@","#" } };
+}
+
+
+ <ol>
+@foreach(var s in a){
+    <li>@s</li>
+}
+ </ol>
